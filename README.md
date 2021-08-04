@@ -1,5 +1,7 @@
-#基于多负荷特征的FHMM负荷分解
-##数据集
+基于多负荷特征的FHMM负荷分解  
+
+##数据集  
+
 [AMpds](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MXB7VO)
 ##⚠数据集转换
 * 由于python版本的差异，需要预先将AMpds的csv文件进行格式处理，并以Dataframe格式进行存储。
