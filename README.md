@@ -8,14 +8,16 @@
 
 * 转换得到的总数据文件：列一级索引为各用电器简称，如B1E,FGE等；二级索引为各电器物理量，如V,I,P等。行索引为转换后的时间戳。
 ## F1指标修改
-[论文](https://www.sciencedirect.com/science/article/abs/pii/S0306261917312369)  
-    def energy_f1score(app_gt, app_pred):  
-        gt_temp = np.array(app_gt).reshape(-1,1)  
-        pred_temp = np.array(app_pred).reshape(-1,1)  
-        temp=np.hstack((gt_temp,pred_temp))  
-        molecule=temp.min(axis=1).sum()  
-        denominator= pred_temp.sum()  
-        P=molecule/denominator  
-        denominator= gt_temp.sum()  
-        R=molecule/denominator  
-        return (2*(P*R)/(P+R))
+[公式来源](https://www.sciencedirect.com/science/article/abs/pii/S0306261917312369)  
+代码段
+<pre><code>def energy_f1score(app_gt, app_pred):  
+    gt_temp = np.array(app_gt).reshape(-1,1)  
+    pred_temp = np.array(app_pred).reshape(-1,1)  
+    temp=np.hstack((gt_temp,pred_temp))  
+    molecule=temp.min(axis=1).sum()  
+    denominator= pred_temp.sum()  
+    P=molecule/denominator  
+    denominator= gt_temp.sum()  
+    R=molecule/denominator  
+    return (2*(P*R)/(P+R))
+</code></pre>
