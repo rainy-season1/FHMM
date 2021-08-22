@@ -9,7 +9,7 @@
 * 转换得到的总数据文件：列一级索引为各用电器简称，如B1E,FGE等；二级索引为各电器物理量，如V,I,P等。行索引为转换后的时间戳。
 ## F1指标修改
 [公式来源](https://www.sciencedirect.com/science/article/abs/pii/S0306261917312369)  
-代码段
+在NIMLTK工具包loss.py文件添加如下代码段：
 <pre><code>def energy_f1score(app_gt, app_pred):  
     gt_temp = np.array(app_gt).reshape(-1,1)  
     pred_temp = np.array(app_pred).reshape(-1,1)  
