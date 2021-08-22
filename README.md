@@ -21,5 +21,5 @@
     R=molecule/denominator  
     return (2*(P*R)/(P+R))
 </code></pre>
-## 数据集
+## 后续
 后续将对基于多负荷特征的FHMM负荷分解算法进行函数形式上的修改，使其能够被NILMTK工具包调用
